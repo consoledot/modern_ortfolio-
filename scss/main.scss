@@ -81,6 +81,7 @@ main {
     }
 }
 
+//About Page
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -118,6 +119,50 @@ main {
     .job-3 {
         grid-area: job3;
     }
+}
+
+//Works/projects
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+
+        &:hover {
+            border-color: $secondary-color;
+            opacity: 0.5;
+            @include easeOut;
+        }
+    }
+}
+
+//Button style
+.btn {
+    border: 0;
+    padding: 0.5rem 1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+    text-align: center;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333
 }
 
 #main-footer {
